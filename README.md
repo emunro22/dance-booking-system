@@ -1,100 +1,103 @@
 Web Development Coursework Part 2
+===================================
 
-Overview
+Overview:
+---------
+This is my Web Development Coursework Part 2. Upon visiting the provided link, users are greeted with a styled landing page created using CSS (styles.css). The homepage automatically redirects users to the following pages:
+  • View Courses
+  • Admin Login
+  • Sign Up as Admin
 
-This is my Web Development Coursework Part 2. Upon visiting the link provided, the users are greeted with a styled landing page created using CSS (styles.css). The homepage redirects users automatically to:
+This Node.js web application enables users to browse dance courses and allows administrators (or newly signed-up users) to manage courses (add, update, delete) through secure authentication and additional verification steps (such as captcha on sign-up and deletion confirmation).
 
-View Courses
-
-Admin Login
-
-Sign Up as Admin
-
-Directory Structure
-
+Directory Structure:
+--------------------
 Coursework/
 ├── controllers/
-│ ├── authController.js
-│ └── courseController.js
+│   ├── authController.js
+│   └── courseController.js
 ├── database/
-│ ├── courses.db
-│ └── users.db
+│   ├── courses.db
+│   └── users.db
 ├── models/
-│ └── db.js
+│   └── db.js
 ├── public/
-│ ├── styles.css
+│   ├── index.html
+│   └── styles.css
 ├── views/
-│ ├── addCourse.mustache
-│ ├── signup.mustache
-│ ├── login.mustache
-│ ├── signup.mustache
-│ ├── updateCourse.mustache
-│ └── courses.mustache
+│   ├── addCourse.mustache
+│   ├── signup.mustache
+│   ├── login.mustache
+│   ├── updateCourse.mustache
+│   ├── courses.mustache
+│   ├── course.mustache
+│   ├── confirmDelete.mustache
+│   └── enrol.mustache
 ├── index.js
 ├── package.json
 ├── package-lock.json
-└── README.md
+└── README.txt
 
-Features and Functionalities
+Features and Functionalities:
+------------------------------
+View Courses:
+  • Users can freely browse available dance courses (e.g. Ballet Dancing, Irish Dancing).
+  • Each course displays complete details: name, duration, date, time, description, location, and price.
+  • "View Details" displays the complete course information.
+  • Users can register for courses with successful registrations logged.
 
-View Courses
+Admin Login:
+  • Secure username/password login.
+  • Displays an Admin Dashboard for course management.
+  • Incorrect login attempts produce clear error messages.
 
-Browsing Courses:
+Admin Sign-Up:
+  • Users can sign up with a username, password, and captcha verification.
+  • Incorrect captcha entries display "Captcha mismatch! Go back and try again."
+  • Successful sign-up immediately grants admin rights.
 
-Users can browse available dance courses (e.g., Ballet Dancing, Irish Dancing) freely.
+Course Management:
+  • Admins can add, update, and delete courses.
+  • Deletion requires confirmation by typing the word "delete".
+  • Unauthorized update/delete attempts display: "Unauthorized. Admin login required."
 
-Each course displays complete detail: name, duration, date, time, description, location, price.
+Additional Functionalities:
+  • User enrolment via a simple enrolment form.
+  • The front end is styled with custom CSS (styles.css) and Bootstrap.
+  • The code is modular with separate controllers, models, and views.
 
-Course Interaction:
+Installation and Running the Application:
+-------------------------------------------
+Prerequisites:
+  • Node.js (version 14 or later is recommended)
+  • Git
 
-"View Details" displays complete course details.
+Steps:
+  1. Clone the repository:
+       git clone https://github.com/emunro22/dance-booking-system.git
 
-Users can register, successful registrations noted against user's name, email, and registration ID.
+  2. Navigate to the project folder:
+       cd dance-booking-system
 
-Invalid update/delete attempts render: "Unauthorized. Admin login required."
+  3. Install the required dependencies:
+       npm install
 
-Admin Login
+  4. Start the application:
+       npm start
+       or
+       node index.js
 
-Authentication:
+  5. Open your web browser and go to:
+       http://localhost:3000
 
-Secure username/password login.
+Deployment:
+-----------
+For local development, running the application on http://localhost:3000 is sufficient.
 
-Admin Dashboard view to manage courses.
+Conclusion:
+-----------
+This project demonstrates a thorough understanding of web development concepts, including secure authentication, dynamic content management, and enhanced user interaction. Extra verification steps, such as captcha on sign-up and deletion confirmation, have been implemented to improve security and usability.
 
-Show errors prominently in case of incorrect credentials.
-
-Managing Courses:
-
-Update course details (name, duration, date, etc.).
-
-Deletion requested with confirmation; incorrect confirmations show error: "Incorrect confirmation word. Please type 'delete' to confirm deletion."
-
-Admin Sign-Up
-
-Account Creation:
-
-Password/username sign-up with Captcha verification.
-
-Incorrect Captcha brings up: "Captcha mismatch! Go back and try again."
-
-Successful sign-up gives immediate admin access.
-
-Technical Details
-
-Frontend: CSS-styled (styles.css).
-
-Backend: Node.js, controllers, and models.
-
-Database Management: SQLite (courses.db, users.db).
-
-Logging: Terminal-based logging for enrolment.
-
-Security: Captcha and Authentication protection.
-
-Conclusion
-
-The project demonstrates a thorough understanding of the concepts of web development, including secure authentication, dynamic content, and improving user interaction. I have included additional verification steps beyond the minimum specification to improve security and useability.
-
-Thank you for taking the time to read my coursework. I hope you will enjoy browsing and navigating the site and find it easy to navigate.
+Thank you for reviewing my coursework. I hope you enjoy browsing and navigating the site.
 
 Author: Euan Munro
