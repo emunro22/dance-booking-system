@@ -1,0 +1,22 @@
+<html>
+<head>
+  {{> header}}
+</head>
+<body>
+<div class="container">
+  <h1>Enrol in Course: {{course.name}}</h1>
+  <form action="/enrol/{{course._id}}" method="POST">
+    <div class="form-group">
+      <label for="name">Your Name:</label>
+      <input type="text" name="name" id="name" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" id="email" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Enrolment</button>
+  </form>
+  <a href="/courses" class="btn btn-secondary mt-3">Back to Courses</a>
+</div>
+</body>
+</html>
